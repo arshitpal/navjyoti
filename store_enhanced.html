@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Nav Jyoti Handlooms</title>
+    <meta name="description" content="Browse our complete collection of handmade kurtas, suits, bags, and doormats. Authentic craftsmanship at affordable prices.">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/Images/logo.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/Images/logo.png" alt="Nav Jyoti Handlooms Logo" loading="lazy">
+                <span class="ms-2 fw-bold text-primary-custom d-none d-md-inline">Nav Jyoti Handlooms</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Search Bar -->
+                <div class="search-container mx-auto d-none d-lg-block">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search products..." aria-label="Search products">
+                    <button class="search-btn" type="button" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="store.html"><i class="fas fa-store me-1"></i>Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stories.html"><i class="fas fa-book me-1"></i>Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-phone me-1"></i>Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php"><i class="fas fa-user me-1"></i>Admin</a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart me-1"></i>Cart
+                            <span class="cart-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Search Bar -->
+    <div class="container d-lg-none mt-3 pt-5">
+        <div class="search-container">
+            <input type="text" id="mobileSearchInput" class="search-input" placeholder="Search products..." aria-label="Search products">
+            <button class="search-btn" type="button" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="py-5 mt-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-4 fw-bold text-primary-custom mb-2">Our Products</h1>
+                    <p class="lead text-muted">Discover our handcrafted collection of authentic handloom products</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-md-end">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Products</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-4 bg-white border-bottom">
+        <div class="container">
+            <div class="filter-section">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="filter-group">
+                            <label for="categoryFilter">Category:</label>
+                            <select id="categoryFilter" class="filter-select">
+                                <option value="all">All Products</option>
+                                <option value="kurtas">Kurtas</option>
+                                <option value="suits">Suits</option>
+                                <option value="bags">Bags</option>
+                                <option value="mats">Doormats</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="filter-group">
+                            <label for="sortFilter">Sort by:</label>
+                            <select id="sortFilter" class="filter-select">
+                                <option value="name">Name</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Rating</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="filter-group">
+                            <label for="priceRange">Price Range:</label>
+                            <select id="priceRange" class="filter-select">
+                                <option value="all">All Prices</option>
+                                <option value="0-500">Under ₹500</option>
+                                <option value="500-1000">₹500 - ₹1000</option>
+                                <option value="1000-2000">₹1000 - ₹2000</option>
+                                <option value="2000+">Above ₹2000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="filter-group">
+                            <small id="resultsCount" class="text-muted d-block mt-4">Showing all products</small>
+                            <button class="btn btn-outline-secondary btn-sm mt-2" onclick="resetFilters()">
+                                <i class="fas fa-undo me-1"></i>Reset Filters
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Kurtas Section -->
+            <div class="mb-5">
+                <h2 class="h3 fw-bold text-primary-custom mb-4">
+                    <i class="fas fa-tshirt me-2"></i>Pure Cotton Kurtas
+                </h2>
+                <div class="row g-4" id="kurtas-section">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <span class="product-badge">31% OFF</span>
+                                <a href="p1.html">
+                                    <img src="/Images/k1/a.png" class="card-img-top" alt="Half Sleeve Kurta" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Half Sleeve Kurta</h5>
+                                <p class="card-text text-muted flex-grow-1">Beautifully crafted in Khadi Pure cotton fabric. Designed with latest trends for casual and occasional wear.</p>
+                                
+                                <div class="product-rating mb-2">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(4.8) 124 reviews</span>
+                                </div>
+                                
+                                <div class="price-section mb-3">
+                                    <span class="h5 text-primary-custom fw-bold">₹449</span>
+                                    <span class="text-muted text-decoration-line-through ms-2">₹649</span>
+                                </div>
+                                
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <label class="form-label mb-0 fw-semibold">Qty:</label>
+                                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                </div>
+                                
+                                <button class="buti add-to-cart-btn w-100" data-name="Half Sleeve Kurta" data-price="449">
+                                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <span class="product-badge">29% OFF</span>
+                                <a href="p2.html">
+                                    <img src="/Images/k2/a.png" class="card-img-top" alt="Full Sleeve Kurta" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Full Sleeve Kurta</h5>
+                                <p class="card-text text-muted flex-grow-1">Textured Khadi Cotton Kurta with Full Sleeves, Mandarin Collar, 2 side pockets & 1 front pocket, Regular Fit</p>
+                                
+                                <div class="product-rating mb-2">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(4.7) 98 reviews</span>
+                                </div>
+                                
+                                <div class="price-section mb-3">
+                                    <span class="h5 text-primary-custom fw-bold">₹499</span>
+                                    <span class="text-muted text-decoration-line-through ms-2">₹699</span>
+                                </div>
+                                
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <label class="form-label mb-0 fw-semibold">Qty:</label>
+                                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                </div>
+                                
+                                <button class="buti add-to-cart-btn w-100" data-name="Full Sleeve Kurta" data-price="499">
+                                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <span class="product-badge">33% OFF</span>
+                                <a href="p3.html">
+                                    <img src="/Images/k3/a.png" class="card-img-top" alt="Long Kurta" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Long Kurta</h5>
+                                <p class="card-text text-muted flex-grow-1">Textured Khadi Cotton Kurta with Full Sleeves, Mandarin Collar, 2 side pockets & 1 front pocket, Regular Fit</p>
+                                
+                                <div class="product-rating mb-2">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(4.9) 142 reviews</span>
+                                </div>
+                                
+                                <div class="price-section mb-3">
+                                    <span class="h5 text-primary-custom fw-bold">₹599</span>
+                                    <span class="text-muted text-decoration-line-through ms-2">₹899</span>
+                                </div>
+                                
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <label class="form-label mb-0 fw-semibold">Qty:</label>
+                                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                </div>
+                                
+                                <button class="buti add-to-cart-btn w-100" data-name="Long Kurta" data-price="599">
+                                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doormats Section -->
+            <div class="mb-5">
+                <h2 class="h3 fw-bold text-primary-custom mb-4">
+                    <i class="fas fa-home me-2"></i>Handmade Doormats
+                </h2>
+                <div class="row g-4" id="mats-section">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <span class="product-badge">20% OFF</span>
+                                <a href="p4.html">
+                                    <img src="/Images/d1/a.png" class="card-img-top" alt="Doormat" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Cotton Doormat</h5>
+                                <p class="card-text text-muted flex-grow-1">Plush, rectangular mat made of cotton, featuring teal color with white flecks and fringed edges.</p>
+                                
+                                <div class="product-rating mb-2">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(4.6) 87 reviews</span>
+                                </div>
+                                
+                                <div class="price-section mb-3">
+                                    <span class="h5 text-primary-custom fw-bold">₹199</span>
+                                    <span class="text-muted text-decoration-line-through ms-2">₹249</span>
+                                </div>
+                                
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <label class="form-label mb-0 fw-semibold">Qty:</label>
+                                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                </div>
+                                
+                                <button class="buti add-to-cart-btn w-100" data-name="Cotton Doormat" data-price="199">
+                                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <span class="product-badge">20% OFF</span>
+                                <a href="p5.html">
+                                    <img src="/Images/d2/a.png" class="card-img-top" alt="Bath Doormat" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Bath Doormat</h5>
+                                <p class="card-text text-muted flex-grow-1">Modern Super Soft (40x60 cm) Microfibre Solid Bath Mat 2000 GSM Super Absorbent Anti Skid</p>
+                                
+                                <div class="product-rating mb-2">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(4.8) 156 reviews</span>
+                                </div>
+                                
+                                <div class="price-section mb-3">
+                                    <span class="h5 text-primary-custom fw-bold">₹199</span>
+                                    <span class="text-muted text-decoration-line-through ms-2">₹249</span>
+                                </div>
+                                
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <label class="form-label mb-0 fw-semibold">Qty:</label>
+                                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                </div>
+                                
+                                <button class="buti add-to-cart-btn w-100" data-name="Bath Doormat" data-price="199">
+                                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <span class="product-badge">29% OFF</span>
+                                <a href="p12.html">
+                                    <img src="/Images/d4/a.png" class="card-img-top" alt="Long Bathmat" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Long Bathmat</h5>
+                                <p class="card-text text-muted flex-grow-1">4' X 2.5' Feet Camel Color Kids Handmade Tufted Modern Style for Living Room & Bedroom</p>
+                                
+                                <div class="product-rating mb-2">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(4.7) 203 reviews</span>
+                                </div>
+                                
+                                <div class="price-section mb-3">
+                                    <span class="h5 text-primary-custom fw-bold">₹499</span>
+                                    <span class="text-muted text-decoration-line-through ms-2">₹699</span>
+                                </div>
+                                
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <label class="form-label mb-0 fw-semibold">Qty:</label>
+                                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                </div>
+                                
+                                <button class="buti add-to-cart-btn w-100" data-name="Long Bathmat" data-price="499">
+                                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-primary btn-lg" id="loadMoreBtn">
+                    <i class="fas fa-plus me-2"></i>Load More Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-section">
+                    <h5 class="text-uppercase">Our Products</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#kurtas-section">Kurtas</a></li>
+                        <li><a href="#suits-section">Suits</a></li>
+                        <li><a href="#bags-section">Bags</a></li>
+                        <li><a href="#mats-section">Doormats</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-section">
+                    <h5 class="text-uppercase">Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Near Shiv Mandir, Roorkee, Uttarakhand 247667</p>
+                    <p><i class="fas fa-phone me-2"></i><a href="tel:+919012170250">9012170250, 9258130772</a></p>
+                    <p><i class="fas fa-envelope me-2"></i><a href="mailto:navjyoti2003@gmail.com">navjyoti2003@gmail.com</a></p>
+                </div>
+                <div class="col-md-3 footer-section">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/navjyoti_handloom"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-section">
+                    <h5 class="text-uppercase">Our Location</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.6748859365593!2d77.8890495!3d29.873648600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb375d4713297%3A0xa5763aee79ec30d6!2sUpica%20Handloom%20House%2C%20Roorkee!5e0!3m2!1sen!2sin!4v1741518400174!5m2!1sen!2sin" 
+                            width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2025 Navjyoti Handlooms. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        function resetFilters() {
+            document.getElementById('categoryFilter').value = 'all';
+            document.getElementById('sortFilter').value = 'name';
+            document.getElementById('priceRange').value = 'all';
+            document.getElementById('searchInput').value = '';
+            document.getElementById('mobileSearchInput').value = '';
+            
+            // Trigger filter update
+            app.currentCategory = 'all';
+            app.currentSort = 'name';
+            app.searchQuery = '';
+            app.filterProducts();
+            
+            app.showToast('Filters reset', 'info');
+        }
+        
+        // Load more functionality
+        document.getElementById('loadMoreBtn').addEventListener('click', function() {
+            // Simulate loading more products
+            this.innerHTML = '<span class="loading-spinner me-2"></span>Loading...';
+            this.disabled = true;
+            
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-plus me-2"></i>Load More Products';
+                this.disabled = false;
+                app.showToast('More products loaded!', 'success');
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

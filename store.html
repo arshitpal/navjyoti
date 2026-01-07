@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .product-card {
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .buti{
+            background-color: #2f00ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .carousel-inner img {
+            max-height: 500px; /* Adjust the height as needed */
+            object-fit: cover;
+        }
+        .navbar {
+            background-color:transparent; /* Transparent background */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .navbar.scrolled {
+            background-color:rgb(78, 5, 105); /* Solid background on scroll */
+        }
+        .navbar-brand img {
+            height: 35px; /* Adjust the logo size */
+        }
+        footer {
+            background-color:rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 2rem 0;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #00aaff;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #00aaff;
+        }
+
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="/Images/logo.png" alt="Nav Jyoti Handlooms Logo">
+           
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="store.html">Our Products</a>
+                </li>  -->
+                <li class="nav-item">
+                    <a class="nav-link" href="stories.html">Our Stories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">Admin login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">🛒Cart/Order</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Top Brands Section -->
+    <section class="top-brands py-5 ">
+        <div class="container pt-5">
+            <h2 class="text-center mb-4"> Pure Cotton Kurtas</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="p1.html">
+                            <img src="/Images/k1/a.png" class="card-img-top" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Half Sleeve Kurta</h5>
+                            <p class="card-text">Beautifully crafted in Khadi Pure cotton fabric. This Short kurta is designed keeping in mind the latest trends in a casual fashion or occassional fashion.</p>
+                            <p class="card-text">Price: Rs 449  <span class="text-muted"><s>  649</s></span></p>.
+                            <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">Quantity: <input type="number" value="1"></p>
+                            <button class="buti" onclick="addToCart('Kurta',450)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="p2.html">
+                            <img src="/Images/k2/a.png" class="card-img-top" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Full Sleeve Kurta</h5>
+                            <p class="card-text">Textured Khadi Cotton Kurta with Full Sleeves
+                                Mandarin Collar
+                                2 side pockets & 1 front pocket
+                                Regular Fit</p>
+                            <p class="card-text">Price: Rs 499<span class="text-muted"><s>699</s></span></p>
+                            <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">Quantity: <input type="number" value="1"></p>
+                            <button class="buti" onclick="addToCart('Kurta', 499)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="p3.html">
+                            <img src="/Images/k3/a.png" class="card-img-top" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Long Kurta</h5>
+                            <p class="card-text">Textured Khadi Cotton Kurta with Full Sleeves
+                                Mandarin Collar
+                                2 side pockets & 1 front pocket
+                                Regular Fit</p>
+                            <p class="card-text">Price: Rs 599<span class="text-muted"><s>899</s></span></p>
+                            <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">Quantity: <input type="number" value="1"></p>
+                            <button class="buti" onclick="addToCart('Kurta', 599)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="woolen-lohis py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Handmade Doormat</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="p4.html">
+                            <img src="/Images/d1/a.png" class="card-img-top" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Doormat</h5>
+                            <p class="card-text">The doormat is a plush, rectangular mat, likely made of cotton, featuring a teal color with white flecks and fringed edges.</p>
+                            <p class="card-text">Price: Rs 199<span class="text-muted"><s>249</s></span></p>
+                            <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">Quantity: <input type="number" value="1"></p>
+                            <button class="buti" onclick="addToCart('Doormat',199 )">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="p5.html">
+                            <img src="/Images/d2/a.png" class="card-img-top" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Bath Doormat</h5>
+                            <p class="card-text">Magic Home Modern Super Soft (40x60 cm) Microfibre Solid Bath Mat 2000 GSM Super Absorbent Anti Skid Mats for Bathroom/Bedroom/Kitchen/Door Mat/Floor Mat</p>
+                            <p class="card-text">Price: Rs 199<span class="text-muted"><s>249</s></span></p>
+                            <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">Quantity: <input type="number" value="1"></p>
+                            <button class="buti" onclick="addToCart('Bathmate', 199)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="p6.html">
+                            <img src="/Images/d3/a.png" class="card-img-top" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Doormat</h5>
+                            <p class="card-text">Doormat for Bathroom/Bedroom/Kitchen/Door Mat/Floor Mat</p>
+                            <p class="card-text">Price: Rs 199<span class="text-muted"><s>149</s></span></p>
+                            <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">Quantity: <input type="number" value="1"></p>
+                            <button class="buti" onclick="addToCart('Doormats',199)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Woolen Stale Section -->
+    <section class="woolen-stale py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Suits</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="p7.html">
+                            <img src="/Images/su1/a.png" class="card-img-top" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Cotton Suit</h5>
+                            <p class="card-text">Unstitched Pure Cotton Salwar Suit Material Printed
+                                Type=Salwar Suit Material Sales Package=1 top, 1 bottom, 1 dupatta</p>
+                            <p class="card-text">Price: Rs 1399<span class="text-muted"><s>1599</s></span></p>
+                            <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">Quantity: <input type="number" value="1"></p>
+                            <button class="buti" onclick="addToCart('C.Suit', 1399)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="p8.html">
+                            <img src="/Images/su2/a.jpg" class="card-img-top" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Suit</h5>
+                            <p class="card-text">Salwar kameez, featuring a white top piece with floral block prints and a blue patterned bottom piece.</p>
+                            <p class="card-text">Price: Rs 999<span class="text-muted"><s>1199</s></span></p>
+                            <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">Quantity: <input type="number" value="1"></p>
+                            <button class="buti" onclick="addToCart('Shuit', 999)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="p9.html">
+                            <img src="/Images/su3/a.jpg" class="card-img-top" alt="Product Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Shuit</h5>
+                            <p class="card-text">The suit design features an unstitched American crepe fabric with a Bandhani print.</p>
+                            <p class="card-text">Price: Rs 999<span class="text-muted"><s>1199</s></span></p>
+                            <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">Quantity: <input type="number" value="1"></p>
+                            <button class="buti" onclick="addToCart('Suit', 999)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Other Woolen Products Section -->
+   <section class="other-woolen-products py-5"> 
+     <div class="container">
+        <h2 class="text-center mb-4">Top Products</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <a href="p10.html">
+                        <img src="/Images/bg1/a.png" class="card-img-top" alt="Product Image">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Handmade Bag</h5>
+                        <p class="card-text">Handmade Macrame Women Fashion Bag Boho Cotton Handbag</p>
+                        <p class="card-text">Price: Rs 249<span class="text-muted"><s>399</s></span></p>
+                        <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                        <p class="card-text">Quantity: <input type="number" value="1"></p>
+                        <button class="buti" onclick="addToCart('Bag',249)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <a href="p11.html">
+                        <img src="/Images/bg2/a.png" class="card-img-top" alt="Product Image">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Handcrafted Bags</h5>
+                        <p class="card-text">
+                            Craft Trade Clutch Bags for Women Jaipuri Rajasthani Handmade</p>
+                        <p class="card-text">Price: Rs 399<span class="text-muted"><s>499</s></span></p>
+                        <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                        <p class="card-text">Quantity: <input type="number" value="1"></p>
+                        <button class="buti" onclick="addToCart('Bbag', 299)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <a href="p12.html">
+                        <img src="/Images/d4/a.png" class="card-img-top" alt="Product Image">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Long Bathmat</h5>
+                        <p class="card-text">4' X 2.5' Feet Camel Color Kids Handmade Tufted Modern Style Living Room & Bed Room Wool Area</p>
+                        <p class="card-text">Price: Rs 499<span class="text-muted"><s>699</s></span></p>
+                        <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p>
+                        <p class="card-text">Quantity: <input type="number" value="1"></p>
+                        <button class="buti" onclick="addToCart('Dmat', 499)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
+<!-- Footer Section -->
+ <footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <!-- Our Facilities -->
+            <div class="col-md-3">
+                <h5 class="text-uppercase">Our Products</h5>
+                <ul class="list-unstyled">
+                    <li>✔ Showl</li>
+                    <li>✔ Kurtas</li>
+                    <li>✔ Stole</li>
+                    <li>✔ Loi</li>
+                </ul>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-md-3">
+                <h5 class="text-uppercase">Contact Us</h5>
+                <p>📍Near Shiv Mandir, Roorkee (haridwar), Uttrakhant 247667</p>
+                <p>📞 Contact: <a href="tel:+919012170250" class="text-light">9012170250,9258130772</a></p>
+                <p>📧 Email: <a href="mailto:navjyoti2003@gmail.com" class="text-light">navjyoti2003@gmail.com</a></p>
+                <p>📱 WhatsApp: <a href="#" class="text-light">9012170250</a></p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3">
+                <h5 class="text-uppercase">Follow Us</h5>
+                <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://www.instagram.com/navjyoti_handloom?utm_source=qr&igsh=MXFvcWJjbGt3cXd2bA==" class="text-light me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-whatsapp fa-2x"></i></a>
+            </div>
+
+            <!-- Google Map -->
+            <div class="col-md-3">
+                <h5 class="text-uppercase">Our Location</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.6748859365593!2d77.8890495!3d29.873648600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb375d4713297%3A0xa5763aee79ec30d6!2sUpica%20Handloom%20House%2C%20Roorkee!5e0!3m2!1sen!2sin!4v1741518400174!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- Customer Reviews -->
+        <div class="mt-4">
+            <h5 class="text-uppercase text-center"> <small> No refund/return </small> </h5>
+            <div id="reviews" class="text-center"></div>
+        </div>
+        <div class="text-center mt-6">
+            <p>&copy; 2025 Navjyoti Handlooms. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript --> <script>
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || []; // Get existing cart or empty array
+    
+            // Check if item already exists
+            let existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1; // Increase quantity if exists
+            } else {
+                cart.push({ name, price, quantity: 1 }); // Add new item
+            }
+    
+            localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart
+            //alert(name + " added to cart at ₹" + price);
+    
+            window.location.href = "cart.html"; // Redirect to cart page
+        }
+    
+        function goToCart() {
+            window.location.href = "cart.html";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add to cart functionality
+        // Search functionality
+        const searchBar = document.getElementById('searchBar');
+        searchBar.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                const query = searchBar.value;
+                window.location.href = `search.html?query=${query}`;
+            }
+        });
+    });
+</script>
+</body>
+</html>

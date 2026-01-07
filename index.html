@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Jyoti Handlooms - Authentic Handmade Products</title>
+    <meta name="description" content="Discover authentic handmade kurtas, suits, bags, and doormats at Nav Jyoti Handlooms. Quality craftsmanship with traditional techniques.">
+    <meta name="keywords" content="handloom, kurta, suits, bags, doormat, handmade, traditional, cotton">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="/Images/logo.png" as="image">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/Images/logo.png">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/Images/logo.png" alt="Nav Jyoti Handlooms Logo" loading="lazy">
+                <span class="ms-2 fw-bold text-primary-custom d-none d-md-inline">Nav Jyoti Handlooms</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Search Bar -->
+                <div class="search-container mx-auto d-none d-lg-block">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search products..." aria-label="Search products">
+                    <button class="search-btn" type="button" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html"><i class="fas fa-store me-1"></i>Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stories.html"><i class="fas fa-book me-1"></i>Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-phone me-1"></i>Contact</a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart me-1"></i>Cart
+                            <span class="cart-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/Images/hero5.jpg" class="d-block w-100" alt="Handmade Kurtas Collection" loading="eager">
+                </div>
+                <div class="carousel-item">
+                    <img src="/Images/hero4.jpg" class="d-block w-100" alt="Traditional Suits Collection" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="/Images/hero2.jpg" class="d-block w-100" alt="Handcrafted Accessories" loading="lazy">
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate__animated animate__fadeInDown">Nav Jyoti Handlooms</h1>
+            <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">Authentic Handmade Products with Traditional Craftsmanship</p>
+            <div class="animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="store.html" class="btn btn-primary-custom btn-lg me-3">
+                    <i class="fas fa-shopping-bag me-2"></i>Shop Now
+                </a>
+                <a href="stories.html" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-play me-2"></i>Our Story
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mobile Search Bar -->
+    <div class="container d-lg-none mt-3">
+        <div class="search-container">
+            <input type="text" id="mobileSearchInput" class="search-input" placeholder="Search products..." aria-label="Search products">
+            <button class="search-btn" type="button" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Our Products Section -->
+    <section class="top-brands py-5 ">
+        <div class="container pt-5">
+            <h2 class="text-center mb-4">Best Products</h2>
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <a href="p1.html">
+                            <img src="/Images/k1/a.png" class="card-img-top" alt="Half Sleeve Kurta">
+                        </a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Half Sleeve Kurta</h5>
+                            <p class="card-text flex-grow-1">Khadi Pure cotton fabric with latest trends for casual wear</p>
+                            <div class="price-section mb-2">
+                                <span class="h6 text-primary fw-bold">₹449</span>
+                                <span class="text-muted text-decoration-line-through ms-2">₹649</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <label class="form-label mb-0 small">Qty:</label>
+                                <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+                            </div>
+                            <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Half Sleeve Kurta', 449)">
+                                <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <a href="p10.html">
+                            <img src="/Images/bg1/a.png" class="card-img-top" alt="Handmade Bag">
+                        </a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Handmade Bag</h5>
+                            <p class="card-text flex-grow-1">Macrame Women Fashion Bag - Boho Cotton Handbag</p>
+                            <div class="price-section mb-2">
+                                <span class="h6 text-primary fw-bold">₹249</span>
+                                <span class="text-muted text-decoration-line-through ms-2">₹399</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <label class="form-label mb-0 small">Qty:</label>
+                                <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+                            </div>
+                            <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Handmade Bag', 249)">
+                                <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <a href="p12.html">
+                            <img src="/Images/d4/a.png" class="card-img-top" alt="Long Bathmat">
+                        </a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Long Bathmat</h5>
+                            <p class="card-text flex-grow-1">Handmade Tufted Modern Style for Living Room & Bedroom</p>
+                            <div class="price-section mb-2">
+                                <span class="h6 text-primary fw-bold">₹499</span>
+                                <span class="text-muted text-decoration-line-through ms-2">₹699</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <label class="form-label mb-0 small">Qty:</label>
+                                <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+                            </div>
+                            <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Long Bathmat', 499)">
+                                <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="woolen-lohis py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Top Products</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <a href="p5.html">
+                            <img src="/Images/d2/a.png" class="card-img-top" alt="Bath Doormat">
+                        </a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bath Doormat</h5>
+                            <p class="card-text flex-grow-1">Modern Super Soft Microfibre Bath Mat - Anti Skid</p>
+                            <div class="price-section mb-2">
+                                <span class="h6 text-primary fw-bold">₹199</span>
+                                <span class="text-muted text-decoration-line-through ms-2">₹249</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <label class="form-label mb-0 small">Qty:</label>
+                                <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+                            </div>
+                            <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Bath Doormat', 199)">
+                                <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <a href="p9.html">
+                            <img src="/Images/su3/a.jpg" class="card-img-top" alt="Designer Suit">
+                        </a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Designer Suit</h5>
+                            <p class="card-text flex-grow-1">Unstitched American crepe fabric with Bandhani print</p>
+                            <div class="price-section mb-2">
+                                <span class="h6 text-primary fw-bold">₹800</span>
+                                <span class="text-muted text-decoration-line-through ms-2">₹1000</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <label class="form-label mb-0 small">Qty:</label>
+                                <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+                            </div>
+                            <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Designer Suit', 800)">
+                                <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <a href="p3.html">
+                            <img src="/Images/k3/a.png" class="card-img-top" alt="Long Kurta">
+                        </a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Long Kurta</h5>
+                            <p class="card-text flex-grow-1">Textured Khadi Cotton with Full Sleeves & Mandarin Collar</p>
+                            <div class="price-section mb-2">
+                                <span class="h6 text-primary fw-bold">₹599</span>
+                                <span class="text-muted text-decoration-line-through ms-2">₹899</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <label class="form-label mb-0 small">Qty:</label>
+                                <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+                            </div>
+                            <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Long Kurta', 599)">
+                                <i class="fas fa-cart-plus me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           <div class="text-center mt-4">
+               <a href="store.html" class="btn btn-primary btn-lg">
+                   <i class="fas fa-shopping-bag me-2"></i>View All Products
+               </a>
+           </div>
+        </div>
+    
+    </section>
+   <!-- Footer Section -->
+   <footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5 class="text-uppercase">Our Products</h5>
+                <ul class="list-unstyled">
+                    <li>✔ Kurtas</li>
+                    <li>✔ Suits</li>
+                    <li>✔ Bags</li>
+                    <li>✔ Doormats</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5 class="text-uppercase">Contact Us</h5>
+                <p class="small">📍 Near Shiv Mandir, Roorkee, Uttarakhand 247667</p>
+                <p class="small">📞 <a href="tel:+919012170250" class="text-light">9012170250</a></p>
+                <p class="small">📧 <a href="mailto:navjyoti2003@gmail.com" class="text-light">navjyoti2003@gmail.com</a></p>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5 class="text-uppercase">Follow Us</h5>
+                <div class="d-flex gap-2">
+                    <a href="#" class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="https://www.instagram.com/navjyoti_handloom" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-whatsapp fa-lg"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5 class="text-uppercase">Location</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.6748859365593!2d77.8890495!3d29.873648600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb375d4713297%3A0xa5763aee79ec30d6!2sUpica%20Handloom%20House%2C%20Roorkee!5e0!3m2!1sen!2sin!4v1741518400174!5m2!1sen!2sin" 
+                        width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="text-center mt-4 pt-3 border-top">
+            <p class="mb-0">&copy; 2025 Navjyoti Handlooms. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            
+            // Show toast notification
+            if (typeof app !== 'undefined' && app.showToast) {
+                app.showToast(name + " added to cart!", 'success');
+            }
+            
+            // Update cart badge
+            const badge = document.querySelector('.cart-badge');
+            if (badge) {
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                badge.textContent = totalItems;
+                badge.style.display = totalItems > 0 ? 'flex' : 'none';
+            }
+        }
+        
+        // Initialize cart badge on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const badge = document.querySelector('.cart-badge');
+            if (badge) {
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                badge.textContent = totalItems;
+                badge.style.display = totalItems > 0 ? 'flex' : 'none';
+            }
+        });
+    </script>
+</body>
+</html>
